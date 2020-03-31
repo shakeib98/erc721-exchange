@@ -9,65 +9,80 @@ class App extends Component {
         super(props)
         this.state = {
             items : [],
-            currentItem : {
-                text : '' ,
-                key : ''
+            isLoaded : false,
+                
             }
+            this.handleInput = this.handleInput.bind(this);
+     this.addItem = this.addItem.bind(this);
+    
+        };
+
+        componentDidMount () {
+            fetch('https://jsonplaceholder.typicode.com/users')
+            .then(res => res.json())
+            .then(json => {
+                this.setState({
+                    isLoaded:true,
+                    items:json,
+                })
+            })
+            console.log(this.state.items);
         }
         
-    this.handleInput = this.handleInput.bind(this);
-    this.addItem = this.addItem.bind(this);
-    }
+     
 
 
-    handleInput = (event) => {
-        this.setState({
-            currentItem : {
-                text : event.target.value,
-                key : Date.now()
-            }
-        })
-    }
-
-    addItem = (event) => {
-        event.preventDefault();
-        const newItem = this.state.currentItem;
-        console.log(newItem);
-
+        handleInput = (event) => {
+            this.setState( {
+                value : event.target.value
+    
+            })
+            console.log(event.target.value)
+        }
        
-
+    addItem = (event) => {
+       console.log('Samad')
+       
     }
-
 
     render() {
+        var {isLoaded , items} = this.state;
+
+        if(!isLoaded) {
+            return <div> Loading...</div>
+        }
+
+        else {
         return (   
-            <div className = "App">   
+            <div className = "App"   >   
+            
           <header>
               <form id = "ToDo-Form"  >
               
-                  <input type="text" placeholder="Deploy Coins" 
-                  value = {this.state.currentItem.text} 
+                  <input  placeholder="Deploy" 
+                  type = "number"
+                  value = {this.state.items} 
                   onChange={this.handleInput} />
-                  <button type="" onClick={this.addItem}>Deploy</button>
+                  <button onClick={ () => this.addItem}>Deploy</button>
                   <br/>
                   
                  </form>
 
           </header>
           <form id ="ToDo-Forms" >
-          <input type="text" placeholder="Mint Coins" 
-                  value = {this.state.currentItem.text} 
+          <input type="number" placeholder="Mint Coins" 
+                  value = {this.state.items} 
                   onChange={this.handleInput} />
                   
-                  <button>Mint</button>
+                  <button onClick={ () => this.addItem}>Mint</button>
                  </form>
 
 
                  <form id ="ToDo-Forms" >
-          <input type="text" placeholder="Transfer Coins" 
-                  value = {this.state.currentItem.text} 
+          <input type="number" placeholder="Transfer Coins" 
+                  value = {this.state.items} 
                   onChange={this.handleInput} />
-                  <button>Transfer</button>
+                  <button onClick={ () => this.addItem}>Transfer</button>
                   <br/>
                     <select id="cars">
                     <option value="volvo">Volvo</option>
@@ -81,7 +96,7 @@ class App extends Component {
                  <form id ="ToDo-Forms" >
                      <input placeholder="Sell Tokens"  type= "number"/>
                      
-                     <button >Sell</button>
+                     <button onClick={ () => this.addItem}>Sell</button>
                      <br/>
 
                     <select id="cars">
@@ -102,21 +117,20 @@ class App extends Component {
                     <br/>
                     <input type="text"  placeholder="Buy Coins" />
 
-                     <button>Buy</button>
+                     <button onClick={ () => this.addItem}>Buy</button>
                      <br/>
                      <input type="number" placeholder="Get Balance" />
-                     <button>Balances</button>
+                     <button onClick={ () => this.addItem}>Balances</button>
                  </form>
+                 
 
 
           
                  </div> 
           
           
-          
-         
         
-        );
+        );}
     }
 }
 
