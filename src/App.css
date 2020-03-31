@@ -1,0 +1,199 @@
+body {
+  background-color: darkslategrey;
+  
+}
+
+.App {
+  background-color: #ded8ee;
+  min-height: 600px;
+  width: 1000px;
+  margin: 40px auto;
+  border-radius: 20px;
+}
+
+
+#ToDo-Form input {
+  background-color: rgb(207,12,137);
+  border: 0;
+  width: 80px;
+  height: 50px;
+  padding: 0 20px;
+  margin: 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  color:white;
+  
+}
+
+#ToDo-Form input::placeholder {
+  color: rgb(255, 255,255,0.5);
+}
+
+#ToDo-Form input:focus,#ToDo-Form button:focus{
+  outline: none;
+}
+#ToDo-Form button {
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(2, 136, 204);
+  cursor: pointer;
+  font-weight: bolder;
+  color: #fff;
+
+}
+
+
+#ToDo-Forms input {
+  background-color: rgb(207,12,137);
+  border: 0;
+  width: 100px;
+  height: 50px;
+  padding: 0 20px;
+  margin: 20px;
+  
+  font-size: 15px;
+  border-radius: 10px;
+  color:white;
+  
+}
+
+#ToDo-Forms input::placeholder {
+  color: rgb(255, 255,255,0.5);
+}
+
+#ToDo-Forms input:focus,#ToDo-Form button:focus{
+  outline: none;
+}
+#ToDo-Forms button {
+  height: 50px;
+  width: 80px;
+  border-radius: 5px;
+
+  border: 0;
+  background-color: rgb(2, 136, 204);
+  cursor: pointer;
+  font-weight: bolder;
+  color: #fff;
+
+}
+
+
+#ToDo-Formss input {
+  background-color: rgb(207,12,137);
+  border: 0;
+  width: 100px;
+  height: 50px;
+  padding: 0 20px;
+
+  /* margin: 20px; */
+  margin-left: 28px;
+  margin-top: 150px;
+  font-size: 15px;
+  border-radius: 10px;
+  color:white;
+  
+}
+
+#ToDo-Formss input::placeholder {
+  color: rgb(255, 255,255,0.5);
+}
+
+#ToDo-Formss input:focus,#ToDo-Form button:focus{
+  outline: none;
+}
+#ToDo-Formss button {
+  height: 50px;
+  width: 80px;
+
+  border: 0;
+  background-color: rgb(2, 136, 204);
+  cursor: pointer;
+  font-weight: bolder;
+  color: #fff;
+}
+
+
+
+#ToDo-Form2 input {
+  background-color: rgb(207,12,137);
+  border: 0;
+  width: 100px;
+  height: 50px;
+  padding: 0 20px;
+  margin-left: 650px;
+  margin-top: 100px;
+  float : left;
+  font-size: 15px;
+  border-radius: 10px;
+  color:white;
+  
+}
+
+#ToDo-Form2 input::placeholder {
+  color: rgb(255, 255,255,0.5);
+}
+
+#ToDo-Form2 input:focus,#ToDo-Form button:focus{
+  outline: none;
+}
+#ToDo-Form2 button {
+  height: 50px;
+  width: 80px;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(2, 136, 204);
+  cursor: pointer;
+  font-weight: bolder;
+  color: #fff;
+
+}
+
+
+#ToDo-Form6 input {
+  background-color: rgb(207,12,137);
+  border: 0;
+  width: 200px;
+  height: 50px;
+  padding: 0 20px;
+  margin-left: 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  color:white;
+  
+}
+
+#ToDo-Form6 input::placeholder {
+  color: rgb(255, 255,255,0.5);
+}
+
+#ToDo-Form6 input:focus,#ToDo-Form button:focus{
+  outline: none;
+}
+#ToDo-Form6 button {
+  height: 50px;
+  width: 80px;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(2, 136, 204);
+  cursor: pointer;
+  margin-left: 700px;
+  margin-bottom: 300px ;
+  font-weight: bolder;
+  color: #fff;
+
+}
+
+.button {
+ 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background-color: blue;
+  margin: 20px;
+}
